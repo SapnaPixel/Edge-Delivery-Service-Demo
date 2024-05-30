@@ -17,17 +17,63 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  min-height: 509px;
+  height: 100%;
+  min-width: 709px;
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: 32px;
+    /* gap: 32px; */
+  }
+  .feature-article .columns > div {
+    gap: 0;
+    align-items: center;
+    flex-direction: unset;
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
   }
+}
+
+.section.columns-container .button-container .button{
+  background-color:  #ffea00;
+    border-radius:  0;
+    color: #202020;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+}
+
+.section.columns-feature-section .feature-article > div div:last-child h3{
+  margin:0;
+}
+
+.section.columns-feature-section .feature-article > div div:last-child{
+  padding: 37px;
+  background-color: #ebebeb;
+}
+
+.section.columns-feature-section .feature-article > div div:last-child p{
+  font-size: 18px;
+  line-height: 2.5;
+  margin: 0 0 13.5px;
+  text-align: justify;
+}
+
+.section.columns-feature-section .feature-article > div div:last-child h3{
+  font-family: var(--body-font-asar);
+  font-size: 36px;
+}
+
+.section.columns-feature-section .feature-article > div div:last-child p:nth-of-type(2){
+  font-size: 14px;
 }

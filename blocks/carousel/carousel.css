@@ -1,5 +1,8 @@
 .carousel .carousel-slides-container {
   position: relative;
+  /* new add  */
+  max-width: 1199pt !important;
+  margin: auto;
 }
 
 .carousel .carousel-slides,
@@ -14,6 +17,7 @@
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   overflow: scroll clip;
+  position: relative;
 }
 
 .carousel .carousel-slides::-webkit-scrollbar {
@@ -24,7 +28,7 @@
   flex: 0 0 100%;
   scroll-snap-align: start;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: flex-start;
   justify-content: center;
   position: relative;
@@ -55,10 +59,12 @@
   z-index: 1;
   padding: 1rem;
   margin: 1.5rem 3rem;
-  color: white;
-  background-color: rgba(0 0 0 / 50%);
-  position: relative;
-  width: var(--slide-content-width, auto);
+  color: black;
+  background-color: white;
+  position: absolute;
+  /* top:200px; */
+  bottom:-405px;
+  width: 80%;
 }
 
 .carousel .carousel-slide-indicators {
@@ -68,8 +74,8 @@
 }
 
 .carousel .carousel-slide-indicator button {
-  width: 1rem;
-  height: 1rem;
+  width: 10px;
+  height: 10px;
   padding: 0;
   border-radius: 1rem;
   background-color: rgba(0 0 0 / 25%);
@@ -97,14 +103,17 @@
 
 .carousel .carousel-navigation-buttons {
   position: absolute;
-  top: 50%;
+  /* top: 50%; */
   transform: translateY(-50%);
   left: 0.5rem;
-  right: 0.5rem;
-  display: flex;
+  right: auto;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; */
   z-index: 1;
+  bottom: -12%;
+  left: 92%;
+  display: flex;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -115,18 +124,18 @@
   width: 2rem;
   height: 2rem;
   position: relative;
-  background-color: rgba(0 0 0 / 25%);
+  background-color: inherit;
 }
 
 .carousel .carousel-navigation-buttons button:hover,
 .carousel .carousel-navigation-buttons button:focus-visible {
-  background-color: rgba(0 0 0 / 80%);
+  /* background-color: rgba(0 0 0 / 80%); */
 }
 
 .carousel .carousel-navigation-buttons button::after {
   display: block;
   content: "";
-  border: 3px white solid;
+  border: 3px #000000 solid;
   border-bottom: 0;
   border-left: 0;
   height: 0.75rem;
@@ -137,16 +146,28 @@
   transform: translate(-50%, -50%) rotate(-135deg);
 }
 
+.slide-prev,
+.slide-next {
+  /* Style your buttons as needed */
+  background-color: #fff;
+  /* border: 1px solid #ccc; */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  margin-right: 10px;
+  position: absolute;
+}
 .carousel .carousel-navigation-buttons button.slide-next::after {
   transform: translate(-50%, -50%)  rotate(45deg);
   left: calc(50% - 3px);
 }
 
 @media (width >= 600px) {
-  .carousel .carousel-navigation-buttons {
+  /* .carousel .carousel-navigation-buttons {
     left: 1rem;
     right: 1rem;
-  }
+  } */
 
   .carousel .carousel-navigation-buttons button {
     width: 3rem;
@@ -160,11 +181,55 @@
 
   .carousel .carousel-slide .carousel-slide-content {
     --slide-content-width: 50%;
-
     margin: 2.5rem 5rem;
+    background-color: #fff;
+    float: left;
+    min-height: 180px;
+    padding-bottom: 0;
+    padding-left: 28px;
+    padding-right: 28px;
+    position: relative;
+    width: 71pc;
   }
 
   .carousel .carousel-slide .carousel-slide-content[data-align="justify"] {
     --slide-content-width: auto;
   }
 }
+
+/* carousel css starts  */
+
+.section.carousel-section-container > div{
+    margin:unset;
+    max-width: 100%;
+}
+
+main .section.carousel-section-container{
+  padding:unset;
+}
+
+.section.carousel-section-container .button-container .button{
+    background-color:  #ffea00;
+    border-radius:  0;
+    color: #202020;
+    float: left;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 1em 2.5em;
+    text-transform: uppercase;
+}
+
+.section.carousel-section-container .carousel-slide-content h2,p{
+  margin: 0;
+}
+
+.section.carousel-section-container .carousel-slide-content p{
+  font-size: 18px;
+  color:#202020;
+}
+
+.section.carousel-section-container .carousel-slide-content h2{
+  font-family: var(--body-font-asar);
+  font-size: 36px;
+}
+

@@ -108,6 +108,15 @@ export default async function decorate(block) {
     if (section) section.classList.add(`nav-${c}`);
   });
 
+  const navTool=nav.children[2];
+  const inputSearch=document.createElement('input');
+  inputSearch.setAttribute('type','text');
+  inputSearch.setAttribute('placeholder','SEARCH');
+  inputSearch.setAttribute('id','search');
+  inputSearch.setAttribute('name','search');
+  navTool.append(inputSearch);
+  // console.log(navTool)
+
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
   if (brandLink) {

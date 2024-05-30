@@ -1,7 +1,11 @@
 footer {
   padding: 2rem;
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-s);
+  /* background-color: var(--light-color);
+  font-size: var(--body-font-size-s); */
+  background-color: #202020;
+  color: #ebebeb;
+  margin-top: 3rem;
+  padding: 1rem 0 1.5rem;
 }
 
 footer .footer {
@@ -11,4 +15,75 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
+}
+
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container{
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container .logo-title-col-wrapper
+{
+  margin: 0;
+}
+
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container .footer-centered-col-wrapper
+{
+  margin: 0;
+}
+
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container .footer-centered-col-wrapper > div > div
+{
+  margin-left:10px;
+}
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container .follow-us-col-wrapper
+{
+  margin: 0;
+}
+
+.section .footer-centered-col-wrapper .footer-centered-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .section .default-content-wrapper a{
+  color: #f7f7f7;
+  text-decoration: underline;
+}
+
+footer .section .default-content-wrapper p{
+  font-size: 0.75rem;
+}
+
+footer .section .footer-centered-col p{
+  font-size: 0.9rem;
+  padding:15px 17px;
+}
+
+footer .section .footer-centered-col p:hover{
+  text-decoration: underline;
+}
+
+.footer .logo-title-col-wrapper .logo-title-col h1{
+  margin: 0;
+}
+
+.footer .follow-us-col-wrapper .follow-us-col{
+  display: flex;
+}
+
+.footer .follow-us-col-wrapper .follow-us-col > div{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.section.logo-title-col-container.footer-centered-col-container.follow-us-col-container{
+  margin-bottom: 36px;
+}
+
+footer .default-content-wrapper p:last-child{
+  margin-top: 10px;
 }
